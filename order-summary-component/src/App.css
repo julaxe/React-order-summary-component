@@ -1,38 +1,110 @@
+/*variables */
+:root {
+  --purple-background: #382ae1;
+  --text-color: #7c8192;
+  --background-color: #dee5fe;
+  --background-color-plan: #f6fafd;
+  --shadow-color: #dbd9fd;
+  --border-radius: 25px;
+}
+
+/*reset*/
+:root {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+/*base styles*/
 .App {
   text-align: center;
+  margin: 0px;
+}
+.content {
+  background-color: white;
+}
+img {
+  width: 100%;
+}
+h2 {
+  font-weight: 900;
+}
+h4 {
+  font-weight: 700;
+}
+p {
+  color: var(--text-color);
+}
+.center {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pointer:hover {
+  cursor: pointer;
+  filter: opacity(50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*fonts*/
+.App {
+  font-family: "Red Hat Display", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*mobile styles*/
+.App {
+  padding: 5rem 1.5rem;
+  max-width: 450px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.content {
+  border-radius: var(--border-radius);
+}
+.image-header {
+  overflow: hidden;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.description {
+  padding: 0.5rem 2rem 1rem;
+  max-width: 350px;
+}
+.plan {
+  padding: 0.5rem 1.5rem;
+  max-width: 375px;
+}
+.annual-plan {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: var(--background-color-plan);
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 1rem;
+  border-radius: 15px;
+}
+.annual-plan img {
+  max-width: 50px;
+}
+.annual-plan p,
+h4 {
+  margin: 0.1rem 0;
+}
+.annual-plan a:hover {
+  text-decoration: none;
+}
+.call-to-action {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  max-width: 375px;
+}
+.button {
+  background-color: var(--purple-background);
   color: white;
+  padding: 1rem 0;
+  border-radius: 15px;
+  box-shadow: 0 1rem 1rem var(--shadow-color);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cancel-order {
+  padding: 1.5rem 0;
+  color: var(--text-color);
 }
